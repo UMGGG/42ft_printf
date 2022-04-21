@@ -6,20 +6,20 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 18:57:08 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/04/20 19:02:42 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/04/22 02:27:59 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_change_hexa(int num)
+char	*ft_change_hexa(long long num, int i)
 {
 	char			*hexalist;
 	char			*str;
-	unsigned int	leftnum;
+	long long		leftnum;
 	int				size;
 
-	leftnum = ft_givenum(num);
+	leftnum = ft_givenum(num, i);
 	size = 0;
 	hexalist = "0123456789abcdef";
 	while (leftnum != 0)
@@ -31,7 +31,7 @@ char	*ft_change_hexa(int num)
 	if (!str)
 		return (0);
 	str[size--] = '\0';
-	leftnum = ft_givenum(num);
+	leftnum = ft_givenum(num, i);
 	while (size > 0)
 	{
 		str[size--] = hexalist[(leftnum % 16)];
@@ -41,13 +41,13 @@ char	*ft_change_hexa(int num)
 	return (str);
 }
 
-unsigned int	ft_givenum(int num)
+long long	ft_givenum(long long num, int i)
 {
 	unsigned int	finalnum;
 
-	if (num < 0)
+	if (num < 0 && i == 1)
 		finalnum = 4294967296 + num;
 	else
-		finalnum = num;
-	return (finalnum);
+		return (num);
+	return ((long long)finalnum);
 }

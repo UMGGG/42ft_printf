@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 01:14:22 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/04/20 18:57:35 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/04/22 01:59:27 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_ltoa(unsigned int n)
 	i = ft_countnum(n) - 1;
 	str = (char *)malloc(sizeof(char) * (ft_countnum(n) + 1));
 	if (str == 0)
-		return (NULL);
+		return (0);
 	str[ft_countnum(n)] = '\0';
 	while (i >= 0)
 	{

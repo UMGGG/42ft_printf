@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:43:57 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/04/15 17:25:05 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/04/22 01:55:09 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ ssize_t	ft_print_d(va_list **a)
 	ssize_t	print_size;
 
 	print_size = 0;
-	vatemp = va_arg(**a, int);
+	vatemp = (int)va_arg(**a, int);
 	if (vatemp == 0)
 		print_size = write(1, "0", 1);
 	else

@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:44:42 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/04/20 19:00:29 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/04/22 02:22:35 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ ssize_t	ft_print_bx(va_list **a)
 
 	i = 0;
 	print_size = 0;
-	vatemp = va_arg(**a, int);
-	str = ft_change_hexa(vatemp);
+	vatemp = (int)va_arg(**a, int);
+	str = ft_change_hexa((long long)vatemp, 1);
 	while (str[i] != '\0')
 	{
 		if (str[i] >= 97 && str[i] <= 122)

@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:25:01 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/04/20 19:08:14 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/04/22 02:32:22 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ ssize_t	print_va(const char *str, va_list *a)
 		print_size = ft_print_sx(&a);
 	else if (str[1] == 'X')
 		print_size = ft_print_bx(&a);
+	else if (str[1] == 'p')
+		print_size = ft_print_p(&a);
 	return (print_size);
 }
 
@@ -67,8 +69,8 @@ int	ft_printf(const char *str, ...)
 
 int	main(void)
 {
-	unsigned int a = 991828;
-	printf("%d\n", printf("123%c1%s123%d%%%i%d %u %x %X\n", 't', "ghj", -7123332, 10, 0, a, -8849, 2218383));
-	printf("%d\n", ft_printf("123%c1%s123%d%%%i%d %u %x %X\n", 't', "ghj", -7123332, 10, 0, a, -8849, 2218383));
+	unsigned int a = 0;
+	printf ("%d\n", printf("123123 %c %s %d %i %u %% %x %X %p\n", 'a', "asd", -16, -16, -16, -1992, -1992, &a));
+	printf ("%d\n", ft_printf("123123 %c %s %d %i %u %% %x %X %p\n", 'a', "asd", -16, -16, -16, -1992, -1992,&a));
 	return (0);
 }
