@@ -6,7 +6,7 @@
 #    By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 16:22:09 by jaeyjeon          #+#    #+#              #
-#    Updated: 2022/04/14 18:43:42 by jaeyjeon         ###   ########.fr        #
+#    Updated: 2022/04/22 02:40:31 by jaeyjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,9 @@ CC			= gcc
 RM			= rm -rf
 CFLAGS		= -Wall -Wextra -Werror
 
-SRCS		= ft_printf.c ft_printf_utils.c ft_print_c.c
+SRCS		= ft_printf.c ft_printf_utils.c  ft_printf_utils2.c ft_print_c.c \
+			ft_print_d.c ft_print_i.c ft_print_p.c ft_print_s.c \
+			ft_print_u.c ft_print_bx.c ft_print_sx.c
 
 OBJS		= $(SRCS:.c=.o)
 
