@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:45:25 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/04/22 02:47:22 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/04/22 17:16:13 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 ssize_t	ft_print_p(va_list **a)
 {
-	size_t			vatemp;
-	ssize_t			print_size;
-	char			*str;
+	size_t	vatemp;
+	ssize_t	print_size;
+	char	*str;
 
 	print_size = 0;
 	vatemp = (size_t)va_arg(**a, size_t);
 	if (vatemp == 0)
 		return (write(1, "0x0", 3));
-	str = ft_change_hexa((long long)vatemp, 2);
+	str = ft_change_hexa_address((size_t)vatemp);
 	print_size = write(1, "0x", 2);
 	if (print_size == -1)
 		return (print_size);

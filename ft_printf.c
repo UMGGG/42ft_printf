@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:25:01 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/04/22 02:32:22 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/04/22 14:15:42 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	ft_printf(const char *str, ...)
 	{
 		past_print_size = print_size;
 		if (str[i] != '%')
-			print_size += write(0, &str[i], 1);
+			print_size += write(1, &str[i], 1);
 		else
 			print_size += print_va(&str[i++], &a);
 		if (past_print_size > print_size)
@@ -65,12 +65,4 @@ int	ft_printf(const char *str, ...)
 	}
 	va_end(a);
 	return ((int)print_size);
-}
-
-int	main(void)
-{
-	unsigned int a = 0;
-	printf ("%d\n", printf("123123 %c %s %d %i %u %% %x %X %p\n", 'a', "asd", -16, -16, -16, -1992, -1992, &a));
-	printf ("%d\n", ft_printf("123123 %c %s %d %i %u %% %x %X %p\n", 'a', "asd", -16, -16, -16, -1992, -1992,&a));
-	return (0);
 }
