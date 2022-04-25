@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:25:19 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/04/22 15:10:56 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/04/22 18:34:57 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 # include <limits.h>
 
 long long			ft_givenum(long long num, int i);
