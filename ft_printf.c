@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:25:01 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/04/22 14:15:42 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/04/25 19:39:59 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	ft_printf(const char *str, ...)
 		{
 			print_size = -1;
 			va_end(a);
-			return (-1);
+			return (print_size);
 		}
 		i++;
 	}

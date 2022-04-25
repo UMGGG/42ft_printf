@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:45:25 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/04/22 17:16:13 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/04/25 19:14:45 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ ssize_t	ft_print_p(va_list **a)
 	if (print_size == -1)
 		return (print_size);
 	print_size += write(1, str, ft_strlen(str));
-	if (print_size == -1)
-		return (print_size);
+	if (print_size == 1)
+		return (-1);
 	free(str);
 	return (print_size);
 }
